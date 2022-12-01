@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleobra.css">
+    <title>OBRAS</title>
+</head>
+<body>
+
+    <header>
+
+        <div class="menu-topo-2">
+            <div>
+                <img src=".//img-arquivos/logo-antiga.jpg" alt="" width="160px" height="90px" class="container-logo-img">
+            </div>
+
+            <div>
+                <ul>
+                    <li><a href="file:///C:/Users/felicidade/Desktop/integral-engenharia/index.html" target="_blank">INICIO</a></li>
+                    <li><a href="file:///C:/Users/felicidade/Desktop/integral-engenharia/sobrenos.html" target="_blank">SOBRE</a></li>
+                    <li><a href="file:///C:/Users/felicidade/Desktop/integral-engenharia/obra.html" target="_blank">OBRAS</a></li>
+                    <li><a href="">BLOG</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <a href="https://api.whatsapp.com/message/4UIMYA2OL3JUG1?autoload=1&app_absent=0" target="_blank"><img src=".//img-arquivos/whatsapp-fill.png" alt="" class="img-contacts"></a>
+                <a href="mailto: integralprojetos@gmail.com" target="_blank"><img src=".//img-arquivos/mail-fill.png" alt="" class="img-contacts"></a>
+                <a href="tel: +55 27 99793-6385" target="_blank"><img src=".//img-arquivos/phone-fill.png" alt="" class="img-contacts"></a>
+            </div>
+        </div>
+
+    </header>
+
+    <main> 
+
+        <div class="espaco">
+
+            <h3 class="titulo-1">PRÉDIO TAL</h3>
+
+            <div class="container">
+                <button class="arrow-left control" aria-label="Previous image">◀</button>
+                <button class="arrow-right control" aria-label="Next Image">▶</button>
+                <div class="gallery-wrapper">
+                    <div class="gallery">
+                    <!--       <div class="item current-item cyan"></div>
+                    <div class="item deeppink"></div>
+                    <div class="item turquoise"></div>
+                    <div class="item darkblue"></div>
+                    <div class="item purple"></div> -->
+                    <img src=".//img-arquivos/antes/antes-1.jpeg" alt="" class="item current-item">
+                    <img src=".//img-arquivos/depois/dps-1.jpeg" alt="" class="item current-item">
+                    <img src=".//img-arquivos/antes/antes-2.jpeg" alt="" class="item current-item">
+                    <img src=".//img-arquivos/depois/dps-2.jpeg" alt="" class="item current-item">
+                    <img src=".//img-arquivos/antes/antes-3.jpeg" alt="" class="item current-item">
+                    <img src=".//img-arquivos/depois/dps-3.jpeg" alt="" class="item current-item">
+                    <img src=".//img-arquivos/antes/antes-4.jpeg" alt="" class="item current-item">
+                    <img src=".//img-arquivos/depois/dps-4.jpeg" alt="" class="item current-item">
+                    <img src=".//img-arquivos/antes/antes-5.jpeg" alt="" class="item current-item">
+                    <img src=".//img-arquivos/depois/dps-5.jpeg" alt="" class="item current-item">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+
+        <div class="box-footer-1">
+            <h3>Nos Sigam</h3>
+
+            <div class="container-footer-1">
+                <ul>
+                    <li><a href="https://www.facebook.com/integralengenharies" target="_blank"><img src=".//img-arquivos/facebook-circle-fill.png" alt="" width="30px" height="30px" class="img-redes-sociais"></a></li>
+                    <li><a href="https://www.instagram.com/integralengenhariaes/" target="_blank"><img src="./img-arquivos/instagram-fill.png" alt="" width="30px" height="30px" class="img-redes-sociais"></a></li>
+                    <li><a href="" target="_blank"><img src=".//img-arquivos/twitter-fill.png" alt="" width="30px" height="30px" class="img-redes-sociais"></a></li>
+                    <li><a href="" target="_blank"><img src=".//img-arquivos/linkedin-fill.png" alt="" width="30px" height="30px" class="img-redes-sociais"></a></li>
+                </ul>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <div class="box-footer-2">
+        <p>Todos os direitos reservados para Integral Engenharia e Consultoria <br>
+           Site desenvolvido por Gabriel Rangel
+        </p>
+    </div>
+
+    <script>
+
+        const controls = document.querySelectorAll(".control");
+        let currentItem = 0;
+        const items = document.querySelectorAll(".item");
+        const maxItems = items.length;
+
+        controls.forEach((control) => {
+            control.addEventListener("click", (e) => {
+                isLeft = e.target.classList.contains("arrow-left");
+
+                if (isLeft) {
+                    currentItem -= 1;
+                } else {
+                    currentItem += 1;
+                }
+
+                if (currentItem >= maxItems) {
+                    currentItem = 0;
+                }
+
+                if (currentItem < 0) {
+                    currentItem = maxItems - 1;
+                }
+
+                items.forEach((item) => item.classList.remove("current-item"));
+
+                items[currentItem].scrollIntoView({
+                behavior: "smooth",
+                inline: "center"
+                });
+
+                items[currentItem].classList.add("current-item");
+            });
+        });
+    </script>
+    
+</body>
+</html>
