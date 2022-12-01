@@ -1,0 +1,262 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+}
+
+.container-logo-img{
+    object-fit: cover;
+}
+
+
+
+.menu-topo-2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.menu-topo-2 ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+    list-style-type: none;
+}
+
+.menu-topo-2 ul li a:hover{
+    border-radius: 1rem;
+    border: 0.1rem solid #00003f;
+    color: #00003f;
+    transition: 0.8s;
+    background-color: #ffffff; 
+}
+
+.menu-topo-2 ul li a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #00003f;
+    padding: 1rem 2rem;
+    margin: 0rem 1rem;
+    border: 0.1rem solid #00003f;
+    border-radius: 1rem;
+    color: #ffffff;
+    background-color: #00003f;
+}
+
+main{
+    height: 100%;
+    background-color: white;
+}
+
+main .titulo-1{
+    text-align: center;
+    width: 100%;
+    padding: 50px 0px;
+    color: white;
+}
+
+
+.container {
+    position: relative;
+    padding: 15px;
+    max-width: 640px;
+    margin: 0 auto;
+}
+  
+.gallery-wrapper {
+    overflow-x: auto;
+}
+  
+.arrow-left,
+.arrow-right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: auto;
+    bottom: 0;
+    font-size: 20px;
+    line-height: 250px;
+    width: 40px;
+    color: #fff;
+    transition: all 600ms ease-in-out;
+    background: linear-gradient(to left, transparent 0%, black 200%);
+    opacity: 0.1;
+    cursor: pointer;
+    border: none;
+}
+  
+.arrow-left:hover,
+.arrow-right:hover {
+    opacity: 1;
+}
+  
+.arrow-right {
+    right: 0;
+    left: auto;
+    text-align: right;
+    background: linear-gradient(to right, transparent 0%, black 200%);
+}
+  
+.gallery {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 15px;
+}
+  
+.item {
+    width: 350px;
+    height: 600px;
+    object-fit: cover;
+    flex-shrink: 0;
+    transition: all 600ms ease-in-out;
+    opacity: 0.5;
+}
+  
+.current-item {
+    opacity: 1;
+}
+  
+  /* This is from w3schools */
+  /* 
+  https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+  /* Hide scrollbar for Chrome, Safari and Opera */
+.gallery-wrapper::-webkit-scrollbar {
+    display: none;
+}
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+.gallery-wrapper {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+  
+.cyan {
+    background: cyan;
+}
+  
+.deeppink {
+    background: deeppink;
+}
+  
+.turquoise {
+    background: turquoise;
+}
+  
+.darkblue {
+    background: darkblue;
+}
+  
+.purple {
+    background: purple;
+}
+
+.footer{
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(-45deg, #00003f, #000000);
+    display: flex;
+    text-align: center;
+    padding: 3rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.box-footer-1{
+    width: 100%;
+    height: 100%;
+}
+
+.container-footer-1{
+    width: auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-footer-1 ul{
+    list-style-type: none;
+    text-decoration: none;
+    text-align: left;
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+.container-footer-1 ul a{
+    text-decoration: none;
+    color: white;
+}
+
+.box-footer-2{
+    width: 100%;
+    height: 2.5rem;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-footer-2 p {
+    color: #ffffff;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.img-redes-sociais{
+    filter: grayscale(100%);
+    margin: 0px 2rem 0px 2rem;
+}
+
+.espaco{
+    padding-bottom: 30px;
+    background-image: linear-gradient(-45deg, #00003f, #000000);
+    color: white;
+    width: 100%;
+}
+
+@media screen and (max-width: 767px) {
+    .menu-topo-2 ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        list-style-type: none;
+    }
+    .menu-topo-2{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+    .item{
+        width: 250px;
+        height: 250px;
+    }
+
+    .menu-topo-2 ul li{
+        margin: 0.5rem 0rem;
+    }
+    .menu-topo-2 ul li a{
+        text-decoration: none;
+        font-size: 0.8rem;
+        color: #00003f;
+        padding: 0.3rem 0.3rem;
+        border: 1px solid #00003f;
+        border-radius: 1rem;
+        color: #ffffff;
+        background-color: #00003f;
+    }
+}
+
